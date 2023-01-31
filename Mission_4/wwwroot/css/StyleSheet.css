@@ -1,0 +1,32 @@
+﻿.container_z {
+    display: flex;
+    justify-content: center;
+}
+.row {
+    display: flex;
+    justify-content: center;
+}
+.col-sm-6 {
+    
+}
+
+.p {
+    text-align: center;
+    padding-top: 120px
+}
+
+    .p a {
+        text-decoration: underline;
+        color: blue;
+    }
+.label {
+    width: 150px;
+}
+.calculator {
+    display: flex;
+    justify-content: center;
+}
+
+.calc_input {
+    width: 50px;
+}
