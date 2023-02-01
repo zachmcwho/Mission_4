@@ -1,11 +1,11 @@
 ﻿
 $("#btnSend").click(function () {
-    var assignmentGrade = document.getElementById("assignment").value;
-    var quizGrade = document.getElementById("quiz").value;
-    var group_Grade = document.getElementById("group_project").value;
-    var midtermGrade = document.getElementById("midterm").value;
-    var finalGrade = document.getElementById("final").value;
-    var intex = document.getElementById("intex").value;
+    var assignmentGrade = $("#assignment").val();
+    var quizGrade = $("#quiz").val();
+    var group_Grade = $("#group_project").val();
+    var midtermGrade = $("#midterm").val();
+    var finalGrade = $("#final").val();
+    var intex = $("#intex").val();
 
     var percentGrade = (assignmentGrade * .5) + (quizGrade * .1) + (group_Grade * .1) + (midtermGrade * .1) + (finalGrade * .1) + (intex * .1);
     var letterGrade;
