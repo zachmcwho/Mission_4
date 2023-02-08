@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Mission_4.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +13,13 @@ namespace Mission_4.Contollers
         {
             return View();
         }
-
+        [HttpGet]
         public IActionResult Calculator()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Calculator(CalculatorModel model)
         {
             return View();
         }

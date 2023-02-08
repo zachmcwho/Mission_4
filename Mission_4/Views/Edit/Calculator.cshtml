@@ -1,9 +1,10 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿
 @{
     ViewData["Title"] = "Calculator";
+    
 }
+@model CalculatorModel;
+
 <!--GRADE CALCULATOR-->
 <section class="page-section" id="contact">
     <div class="container">
@@ -20,42 +21,44 @@
         <h4 class="">Enter all values as a percent ex. (50 = 50%)</h4>
         <div class="calculator">
 
-            <form action="/" method="post">
+            <form  method="post">
                 <ul>
                     <li>
                         <label class="label">Assignments</label>
-                        <input type="number" class="calc_input" id="assignment" min="0" max="100" value="25% ect." />
+                        <input class="calc_input" id="assignment" asp-for="Assignment" />
                     </li>
                     <li>
                         <label class="label">Quizzes</label>
-                        <input type="number" class="calc_input" id="quiz" value="" />
+                        <input class="calc_input" id="quiz" asp-for="Quiz" />
                     </li>
                     <li>
                         <label class="label">Group Project</label>
-                        <input type="number" class="calc_input" id="group_project" value="" />
+                        <input class="calc_input" id="group_project" asp-for="Group_Project" />
                     </li>
                     <li>
                         <label class="label">Midterm Exam</label>
-                        <input type="number" class="calc_input" id="midterm" value="" />
+                        <input class="calc_input" id="midterm" asp-for="Midterm" />
                     </li>
                     <li>
                         <label class="label">Final Exam</label>
-                        <input type="number" class="calc_input" id="final" value="" />
+                        <input class="calc_input" id="final" asp-for="Final" />
                     </li>
                     <li>
                         <label class="label">INTEX</label>
-                        <input type="number" class="calc_input" id="intex" value="" />
+                        <input type="number" class="calc_input" id="intex" asp-for="Intex" />
                     </li>
                 </ul>
-                <input type="button" id="btnSend" value="Calculate" />
+
+                <input id="btnSend" type="submit" value="Calculate" />
 
             </form>
-
+            <div asp-validation-summary="All"></div>
 
         </div>
         <div id="endGrade">
 
         </div>
+        
     </div>
 </section>
 
